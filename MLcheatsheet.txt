@@ -1,0 +1,10 @@
+```mermaid
+graph TB
+
+    A((start))
+    B{Predict future <br/>data points?}
+    A-->B
+    C[K-means]
+    B--No-->C
+    D{Predict categories <br/>or values?}
+    B--Yes-->D
