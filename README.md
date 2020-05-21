@@ -1,4 +1,4 @@
-# DIY Machne-Learning CheatSheet
+# DIY Machine-Learning CheatSheet
 
 ## Overview
 Why isn't there a cheat sheet on machine learning algorithms that are updated daily?  
