@@ -2,8 +2,11 @@
 
 ## Overview
 Why isn't there a cheat sheet on machine learning algorithms that are updated daily?  
-
 We make it!!
+
+## Description
+MLcheatsheet.txt: ML cheatsheet.written by "mermaid".
+
 
 ## Contribution
 We want to update once a day. 
