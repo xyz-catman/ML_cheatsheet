@@ -9,7 +9,11 @@ MLcheatsheet.txt:  ML cheatsheet.written by "mermaid".
 raw_data:  ML chaetsheet from web(ex. Azure,sklearn etc)
 
 ## Contribution
-We want to update once a day.(in a slow pace)   
+We want to update once a day.
+
+The contents are still poor.   
+We'll be adding more and more little by little.
+
 We need your help.  
 Any and all ideas are welcome.  
 Thank you!!
