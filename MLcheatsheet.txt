@@ -1,6 +1,6 @@
 ```mermaid
 graph TB
-
+    %% ML cheat sheet
     A((start))
     B{Predict future <br/>data points?}
     A-->B
@@ -8,3 +8,20 @@ graph TB
     B--No-->C
     D{Predict categories <br/>or values?}
     B--Yes-->D
+    E{Data in <br/>rank-ordered  <br/>categories?}
+    D--Values-->E
+    
+    %% Data Augmentation
+    F[Image Data Augmentation]
+    G[Deep Learning Approches]
+    F-->G
+    H[Feature Space Augmentaion]
+    G-->H
+    I[Adversarial Training]
+    G-->I
+    J[Neural Style Transfer]
+    G-->J
+    K[GAN Data Augmentation]
+    G-->K
+    L[Neural Style Transfer]
+    G-->L
