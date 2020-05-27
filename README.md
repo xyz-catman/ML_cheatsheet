@@ -5,7 +5,9 @@ Why isn't there a cheat sheet on machine learning algorithms that are updated da
 We make it!!
 
 ## Description
-MLcheatsheet.txt:  ML cheatsheet.written by "mermaid".  
+cheat_sheets: ML cheatsheets
+    MLcheatsheet.txt:  ML cheatsheet.written by "mermaid".  
+    Data Augmentation.txt:  cheatsheet.written by "mermaid".  
 raw_data:  ML chaetsheet from web(ex. Azure,sklearn etc)
 
 ## Contribution
@@ -18,5 +20,5 @@ We need your help.
 Any and all ideas are welcome.  
 Thank you!!
 
-last update: May 26, 2020  
+last update: May 27, 2020  
 start: May 20, 2020
