@@ -8,6 +8,7 @@ We make it!!
 cheat_sheets: ML cheatsheets  
 &nbsp;&nbsp;&nbsp;1.MLcheatsheet.txt:  ML cheatsheet.written by "mermaid".  
 &nbsp;&nbsp;&nbsp;2.Data Augmentation.txt:  cheatsheet.written by "mermaid".  
+  
 raw_data:  ML chaetsheet from web(ex. Azure,sklearn etc)
 
 ## Contribution
