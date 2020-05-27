@@ -1,0 +1,38 @@
+```mermaid
+graph TB
+    %% Data Augmentation
+    F[Image Data Augmentation]
+    G[Deep Learning Approches]
+    F-->G
+    H[Feature Space Augmentaion]
+    G-->H
+    I[Adversarial Training]
+    G-->I
+    J[Neural Style Transfer]
+    G-->J
+    K[GAN Data Augmentation]
+    G-->K
+    %% Basic image manipulations
+    B1[Basic image Manipulations]
+    F-->B1
+    B2[Kernel Filters]
+    B1-->B2
+    B3[Color Space Transformations]
+    B1-->B3
+    B4[Random Erasing]
+    B1-->B4
+    B5[Geometric Transformations]
+    B1-->B5
+    B6[Mixing Images]
+    B1-->B6
+    %%Meta
+    C1[Meta Learning]
+    B5-->C1
+    B6-->C1
+    J-->C1
+    C2[Neural Augmentation]
+    C1-->C2
+    C3[AutoAugment]
+    C1-->C3
+    C4[Smart Augmentaion]
+    C1-->C4
