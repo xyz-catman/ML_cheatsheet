@@ -5,9 +5,10 @@ Why isn't there a cheat sheet on machine learning algorithms that are updated da
 We make it!!
 
 ## Description
-cheat_sheets: ML cheatsheets  
-&nbsp;&nbsp;&nbsp;1.MLcheatsheet.txt:  ML cheatsheet.written by "mermaid".  
-&nbsp;&nbsp;&nbsp;2.Data Augmentation.txt:  cheatsheet.written by "mermaid".  
+cheat_sheets: CheatSheets such as MachineLearning and so on.written by "mermaid".  
+&nbsp;&nbsp;&nbsp;1.MLcheatsheet.txt  
+&nbsp;&nbsp;&nbsp;2.Data Augmentation.txt  
+&nbsp;&nbsp;&nbsp;2.Metric Learning.txt
   
 raw_data:  ML chaetsheet from web(ex. Azure,sklearn etc)
 
