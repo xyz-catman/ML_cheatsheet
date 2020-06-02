@@ -3,8 +3,13 @@ graph TB
     %% ML cheat sheet
     A1((start))
     A2{Predict future <br/>data points?}
+    %%
+    %% Unsupervised Learning
     A3[K-means]
+    %%
+    %% Supervised Learning
     A4{Predict categories <br/>or values?}
+    %% -Value
     A5{Data in <br/>rank-ordered  <br/>categories?}
     A6[Ordinal regression]
     A7{Predict event count?}
@@ -18,6 +23,16 @@ graph TB
     A15[Neural network regression]
     A16[Decision forest regression]
     A17[Boosted decision <br/> tree regression]
+    %% -Categories
+    A29{Two categories <br/> or more than tow?}
+    A30{One of the categories rate?}
+    A31{Prefer classifier<br/>   built from<br/>   >1 two-class classifiers?}
+    A32[One-v-All-multiclass]
+    A33{Prefer explainble<br/>   class boundaries?}
+    A34[Multiclass logistic regression]
+    A35[Multiclass dexision forest<br/> Multiclass decision jungle]
+    A36[Multiclass neural network]
+    %%
     %% Semi-supervised Learning
     A18[Discriminative models]
     A19[Bootstrap]
@@ -30,6 +45,9 @@ graph TB
     A26{Discriminative model <br/>  or Generative model?}
     A27[Discriminative model]
     A28[Generative model]
+    %%
+    %%
+    %% Graph
     A1-->A2
     subgraph Unsupervised Learning
         A3
@@ -39,18 +57,30 @@ graph TB
         A2-->A26
     subgraph Supervised Learning
         A4--Values-->A5
-        A5--Yes-->A6
-        A5--No-->A7
-        A7--Yes-->A8 
-        A7--No-->A9
-        A9--Distribution-->A11
-        A9--Single values-->A10
-        A10--Close enough-->A12
-        A12--If you data points are statistically independent,try-->A13
-        A10--No-->A14
-        A14--No-->A15
-        A14--Yes-->A16
-        A16--If you have overlapping features, try-->A17
+        A4--Categories-->A29
+        subgraph Regression
+            A5--Yes-->A6
+            A5--No-->A7
+            A7--Yes-->A8 
+            A7--No-->A9
+            A9--Distribution-->A11
+            A9--Single values-->A10
+            A10--Close enough-->A12
+            A12--If you data points are statistically independent,try-->A13
+            A10--No-->A14
+            A14--No-->A15
+            A14--Yes-->A16
+            A16--If you have overlapping features, try-->A17
+        end
+        subgraph Multi-class classification
+            A29--2-->A30
+            A30--2-->A31
+            A31--Yes-->A32
+            A31--No-->A33
+            A33--No-->A34
+            A33--Yes-->A35
+            A34--If you prefer performance over traing time. and all features are numerical.try: -->A36
+        end
     end
     subgraph Semi-Supervised Learning
         A26-->A27
