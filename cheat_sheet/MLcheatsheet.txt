@@ -24,6 +24,7 @@ graph TB
     A16[Decision forest regression]
     A17[Boosted decision <br/> tree regression]
     %% -Categories
+    %% --Multi Class Classification
     A29{Two categories <br/> or more than tow?}
     A30{One of the categories rate?}
     A31{Prefer classifier<br/>   built from<br/>   >1 two-class classifiers?}
@@ -32,9 +33,21 @@ graph TB
     A34[Multiclass logistic regression]
     A35[Multiclass dexision forest<br/> Multiclass decision jungle]
     A36[Multiclass neural network]
+    %% --Two-Class Classification
+    A37{<100K data points<br/>  or >100 features}
+    A38[Two-class SVM]
+    A39[Locally Deep SVM]
+    A40{Prefer speed or accuracy?}
+    A41[Two-class averaged perception]
+    A42{Prefer explainble<br/>  class boundaries?}
+    A43[Two-class logistic regression]
+    A44[Two-class Bayes point machine]
+    A45[Two-class neural network]
+    A46[Two-class decision forest<br/> Twho-class decision jungle]
+    A47[Two-class boosted decision tree]
     %%
     %% Semi-supervised Learning
-    A18[Discriminative models]
+    %%A18[Discriminative models]
     A19[Bootstrap]
     A20[Self training]
     A21[Co-Training]
@@ -72,14 +85,30 @@ graph TB
             A14--Yes-->A16
             A16--If you have overlapping features, try-->A17
         end
-        subgraph Multi-class classification
-            A29--2-->A30
-            A30--2-->A31
-            A31--Yes-->A32
-            A31--No-->A33
-            A33--No-->A34
-            A33--Yes-->A35
-            A34--If you prefer performance over traing time. and all features are numerical.try: -->A36
+        subgraph Classification
+            subgraph Multi-class classification
+                A29--2-->A30
+                A30--2-->A31
+                A31--Yes-->A32
+                A31--No-->A33
+                A33--No-->A34
+                A33--Yes-->A35
+                A34--If you prefer performance over traing time. and all features are numerical.try: -->A36
+            end
+            A30--No-->A37
+            A32--Choose a two-class classifier-->A37
+            subgraph Two-Class Classification
+                A37--Yes-->A38
+                A38--If you accuracy in good but you want it faster,try-->A39
+                A37--No-->A40
+                A40--Speed-->A41
+                A40--Accuracy-->A42
+                A42--No-->A43
+                A43--If your data points are statistically independant,try-->A44
+                A43--If you prefer performance over traing time,and all features are numerical,try-->A45
+                A42--No-->A46
+                A46--If you have overlapping features,try-->A47
+            end
         end
     end
     subgraph Semi-Supervised Learning
