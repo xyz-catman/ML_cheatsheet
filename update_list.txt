@@ -1,3 +1,5 @@
+update June 3,2020
+  MLcheatsheet：Part of the classification(finish)
 update June 2,2020 
   MLcheatsheet：Part of the classification
   raw_data:ML cheatsheet by SAS
