@@ -1,4 +1,7 @@
 update June 3,2020
+  MLcheatsheet：Anomaly Detection
+  raw_data:viya_cheat_sheet_20170721_jp
+update June 3,2020
   MLcheatsheet：Part of the classification(finish)
 update June 2,2020 
   MLcheatsheet：Part of the classification
