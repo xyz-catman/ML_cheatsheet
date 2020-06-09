@@ -3,6 +3,12 @@ graph TB
     %% ML cheat sheet
     A1((start))
     A2{Predict future <br/>data points?}
+    A51{Image processing?}
+    A52{Text analysis?}
+    A53{Network theory <br/>or graph theory?}
+    A54{Time series forecast?}
+    A55{Econometric analysis?}
+    A56{optimisation?}
     %%
     %% Unsupervised Learning
     A3[K-means]
@@ -45,6 +51,10 @@ graph TB
     A45[Two-class neural network]
     A46[Two-class decision forest<br/> Twho-class decision jungle]
     A47[Two-class boosted decision tree]
+    %% --Anomaly Detection
+    A48{<100K data points<br/> or >100 features?}
+    A49[One-class-SVM]
+    A50[PCA-based anomaly]
     %%
     %% Semi-supervised Learning
     %%A18[Discriminative models]
@@ -65,9 +75,17 @@ graph TB
     subgraph Unsupervised Learning
         A3
     end
-        A2--No-->A3
-        A2--Yes-->A4
-        A2-->A26
+    A2--No-->A3
+    A2--Yes-->A4
+    A2-->A26
+    A2--No-->A51
+    A51--No-->A52
+    A52--No-->A53
+    A53--No-->A54
+    A54--No-->A55
+    A55--No-->A56
+    A56--No-->A57
+    A57--No-->A58
     subgraph Supervised Learning
         A4--Values-->A5
         A4--Categories-->A29
@@ -108,6 +126,11 @@ graph TB
                 A43--If you prefer performance over traing time,and all features are numerical,try-->A45
                 A42--No-->A46
                 A46--If you have overlapping features,try-->A47
+            end
+            subgraph Anomaly Detection
+                A30--Yes-->A48
+                A48--Yes-->A49
+                A48--No-->A50
             end
         end
     end
