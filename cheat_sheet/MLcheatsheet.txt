@@ -1,5 +1,6 @@
 ```mermaid
 graph TB
+    %% 70
     %% ML cheat sheet
     A1((start))
     A2{Predict future <br/>data points?}
@@ -11,7 +12,21 @@ graph TB
     A56{optimisation?}
     %%
     %% Unsupervised Learning
+    A70{decide the number of class?}
     A3[K-means]
+    %% -Metric learning
+    A59{Metric Learning}
+    A60[Contrastive Learning<br/>Siamese Network]
+    A61[Contrastive Loss]
+    A62[Adaptive loss]
+    A63[Triplet Network]
+    A64[Triplet Loss]
+    A65[Ranked List Loss ]
+    A65[Multi-class N-pair Loss]
+    A66[Divide and Conquer the Embedding Space]
+    A67[Deep Adversarial Metric Learning]
+    A68[Deep quadruplet network]
+    A69[Binary Supervision]
     %%
     %% Supervised Learning
     A4{Predict categories <br/>or values?}
@@ -72,10 +87,24 @@ graph TB
     %%
     %% Graph
     A1-->A2
+    A2--No-->A70
     subgraph Unsupervised Learning
-        A3
+        A70--Yes-->A3
+        A70--No-->A59
+        subgraph Metric Leaning
+            A59-->A60
+            A60-->A61
+            A60-->A62
+            A59-->A63
+            A63-->A64
+            A63-->A65
+            A63-->A66
+            A63-->A67
+           A63-->A68
+            A63-->A69
+        end
     end
-    A2--No-->A3
+
     A2--Yes-->A4
     A2-->A26
     A2--No-->A51
@@ -145,3 +174,4 @@ graph TB
         A27-->A25
         A26-->A28
     end
+
