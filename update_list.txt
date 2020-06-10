@@ -1,4 +1,6 @@
-update June 3,2020
+update June 10,2020
+  MLcheatsheet：add "Metric Learning"
+update June 9,2020
   MLcheatsheet：Anomaly Detection
   raw_data:viya_cheat_sheet_20170721_jp
 update June 3,2020
