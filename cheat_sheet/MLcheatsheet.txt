@@ -1,6 +1,6 @@
 ```mermaid
 graph TB
-    %% 70
+    %% 79
     %% ML cheat sheet
     A1((start))
     A2{Predict future <br/>data points?}
@@ -14,6 +14,15 @@ graph TB
     %% Unsupervised Learning
     A70{decide the number of class?}
     A3[K-means]
+    A71[Affinity Propagation]
+    A72[Mean-shift]
+    A73[Spectral clustering]
+    A74[Ward hierarchical clustering]
+    A75[Agglomerative clustering]
+    A76[DBSCAN]
+    A77[OPTICS]
+    A78[Gaussian mixtures]
+    A79[Birch]
     %% -Metric learning
     A59{Metric Learning}
     A60[Contrastive Learning<br/>Siamese Network]
@@ -89,19 +98,30 @@ graph TB
     A1-->A2
     A2--No-->A70
     subgraph Unsupervised Learning
-        A70--Yes-->A3
-        A70--No-->A59
-        subgraph Metric Leaning
-            A59-->A60
-            A60-->A61
-            A60-->A62
-            A59-->A63
-            A63-->A64
-            A63-->A65
-            A63-->A66
-            A63-->A67
-           A63-->A68
-            A63-->A69
+        subgraph Non-hierarchical method
+            A70--Yes-->A3
+            A70--No-->A59
+            subgraph Metric Leaning
+                A59-->A60
+                A60-->A61
+                A60-->A62
+                A59-->A63
+                A63-->A64
+                A63-->A65
+                A63-->A66
+                A63-->A67
+                A63-->A68
+                A63-->A69
+            end
+            A70-->A71
+            A70-->A72
+            A70-->A73
+            A70-->A74
+            A70-->A75
+            A70-->A76
+            A70-->A77
+            A70-->A78
+            A70-->A79
         end
     end
 
@@ -174,4 +194,3 @@ graph TB
         A27-->A25
         A26-->A28
     end
-
